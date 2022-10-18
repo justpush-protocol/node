@@ -1,0 +1,19 @@
+{
+  "name": "@justlabs-platform/node",
+  "version": "1.0.0",
+  "description": "Node of just-push protocol",
+  "workspaces": ["packages/common", "packages/api", "packages/api-types", "packages/listener"],
+  "private": true,
+  "scripts": {
+    "api:build": "yarn workspace @justlabs-platform/just-push-api build",
+    "api:dev": "yarn workspace @justlabs-platform/just-push-api dev",
+    "api:start": "yarn workspace @justlabs-platform/just-push-api start",
+    "api-types:build":  "yarn workspace @justlabs-platform/just-push-api-types build",
+    "api-types:watch": "yarn workspace @justlabs-platform/just-push-api-types watch",
+    "common:build": "yarn workspace @justlabs-platform/just-push-common build",
+    "common:watch": "yarn workspace @justlabs-platform/just-push-common watch",
+    "listener:build": "yarn workspace @justlabs-platform/just-push-listener build",
+    "listener:dev": "yarn workspace @justlabs-platform/just-push-listener dev",
+    "listener:start": "yarn workspace @justlabs-platform/just-push-listener start"
+  }
+}

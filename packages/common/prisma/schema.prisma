@@ -1,0 +1,60 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// listen to smart contract events and create notifications on database
+model Notification {
+  id        Int     @id @default(autoincrement())
+  title     String?
+  content   String
+  link      String?
+  group     Group   @relation(fields: [groupId], references: [id])
+  groupId   Int
+  broadcast Boolean @default(false)
+  self      Boolean @default(false)
+  timestamp Int
+
+  User   User?   @relation(fields: [userId], references: [userId])
+  userId String?
+}
+
+// listen to smart contract events and create groups on database
+model Group {
+  id            Int             @id
+  name          String
+  owner         String
+  description   String?
+  image         String?
+  website       String?
+  notifiers     Notifier[]
+  notifications Notification[]
+  Subscriptions Subscriptions[]
+}
+
+// listen to smart contract events and create users in the database
+model User {
+  userId        String          @id // wallet address
+  notifications Notification[]
+  Subscriptions Subscriptions[]
+}
+
+model Subscriptions {
+  id      Int    @id @default(autoincrement())
+  group   Group  @relation(fields: [groupId], references: [id])
+  user    User   @relation(fields: [userId], references: [userId])
+  userId  String
+  groupId Int
+}
+
+model Notifier {
+  id     String  @id
+  groups Group[]
+}
