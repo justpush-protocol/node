@@ -5,8 +5,17 @@ export interface NotificationContent {
 }
 
 export interface Notification {
-  id: number;
+  id: string;
   data: NotificationContent;
   timestamp: number;
-  groupId: number;
+  group: Group;
+}
+
+export interface Group {
+  id: string;
+  name: string;
+  owner: string;
+  description: string | null;
+  image: string | null;
+  website: string | null;
 }

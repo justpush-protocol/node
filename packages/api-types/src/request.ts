@@ -1,7 +1,7 @@
 import { NotificationContent } from './notification';
 
 export interface AddGroupRequest {
-  id: number;
+  id: string;
   name: string;
   owner: string;
   description: string | undefined;
@@ -9,8 +9,18 @@ export interface AddGroupRequest {
   website: string | undefined;
 }
 
+export interface ListGroupRequest {
+  filter?: {
+    subscribed?: boolean;
+    owned?: boolean;
+  };
+  limit?: number;
+  offset?: number;
+}
+
 export interface AddNotificationRequest {
-  groupId: number;
+  id: string;
+  groupId: string;
   to: string;
   notification: NotificationContent;
   broadcast: boolean;
@@ -18,16 +28,21 @@ export interface AddNotificationRequest {
   timestamp: number;
 }
 
+export interface GetNotificationsByGroupRequest {
+  groupId: string;
+  limit?: number;
+  offset?: number;
+}
+
 export interface GetNotificationsRequest {
-  groupId: number;
   limit?: number;
   offset?: number;
 }
 
 export interface SubscribeRequest {
-  groupId: number;
+  groupId: string;
 }
 
 export interface UnsubscribeRequest {
-  groupId: number;
+  groupId: string;
 }
