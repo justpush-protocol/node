@@ -1,0 +1,28 @@
+type Query {
+}
+
+type Subscription {
+  notificationAdded(userId: String!): Notification
+}
+
+type Notification {
+    id: String!
+    timestamp: Int!
+    data: NotificationData!
+    group: Group
+}
+
+type  NotificationData {
+  title: String,
+  content: String,
+  link: String,
+}
+
+type Group {
+    id: String!
+    name: String!
+    owner: String!
+    description: String
+    image: String
+    website: String
+}
