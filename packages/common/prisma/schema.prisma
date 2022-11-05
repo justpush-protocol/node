@@ -12,12 +12,12 @@ datasource db {
 
 // listen to smart contract events and create notifications on database
 model Notification {
-  id        Int     @id @default(autoincrement())
+  id        String     @id
   title     String?
   content   String
   link      String?
   group     Group   @relation(fields: [groupId], references: [id])
-  groupId   Int
+  groupId   String
   broadcast Boolean @default(false)
   self      Boolean @default(false)
   timestamp Int
@@ -28,7 +28,7 @@ model Notification {
 
 // listen to smart contract events and create groups on database
 model Group {
-  id            Int             @id
+  id            String          @id
   name          String
   owner         String
   description   String?
@@ -51,10 +51,16 @@ model Subscriptions {
   group   Group  @relation(fields: [groupId], references: [id])
   user    User   @relation(fields: [userId], references: [userId])
   userId  String
-  groupId Int
+  groupId String
 }
 
 model Notifier {
   id     String  @id
   groups Group[]
+}
+
+model ListenerData {
+  id        String     @id
+  lastQueryTimestamp String
+  lastQueryBlockNumber Int
 }

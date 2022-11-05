@@ -1,5 +1,5 @@
 {
-  "name": "@justlabs-platform/just-push-common",
+  "name": "@justpush/just-push-common",
   "version": "1.0.0",
   "description": "Shard code of just-push protocol",
   "main": "dist/index.js",
@@ -11,16 +11,20 @@
     "dotenv": "^16.0.3",
     "morgan": "^1.10.0",
     "prisma": "^4.4.0",
-    "tronweb": "^4.4.0"
+    "tronweb": "^4.4.0",
+    "ws": "^8.10.0"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",
+    "@types/express": "^4.17.14",
     "@types/morgan": "^1.9.3",
     "@types/node": "^18.7.23",
+    "@types/ws": "^8.5.3",
     "prettier": "^2.7.1",
     "typescript": "^4.8.4"
   },
   "scripts": {
+    "postinstall": "prisma generate",
     "build": "tsc",
     "start": "node dist/index.js",
     "watch": "tsc -w",
