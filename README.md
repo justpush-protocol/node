@@ -53,8 +53,9 @@ Ideally in future, JustPush nodes will be p2p based validators that can be run b
 
 This repository consists of multiple packages.
 
-- (packages/api) API to communicate with justpush protocol
-- (packages/api-types) Typescript api types
-- (pacakges/common) Logic that persist notifications and verifies signatures
+- [packages/api](./packages/api) API to communicate with justpush protocol
+- [packages/api-types](./packages/api-types) Typescript api types
+- [packages/listener](./packages/listener) Listner that monitor smart contract events
+- [packages/common](./packages/common) Common utils used by both API and listener
 
 ---
