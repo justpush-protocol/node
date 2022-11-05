@@ -1606,8 +1606,10 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@justpush/contracts@file:../contracts":
+"@justpush/contracts@0.1.0.alpha.1":
   version "0.1.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/@justpush/contracts/-/contracts-0.1.0-alpha.1.tgz#98e191689df75d7d21d64782727677efb1a0c24b"
+  integrity sha512-k9Zp25eF79AFErRwKf/ar/1lme7JYipwgH1YEgA5rdI8+Fe5OsWJ08fTM9eDl2+JpXnlo8HbwKlOotJK9fitGQ==
   dependencies:
     uuid "^9.0.0"
 
