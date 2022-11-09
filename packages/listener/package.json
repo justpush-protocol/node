@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@justpush/contracts": "0.1.0.alpha.1",
+    "@justpush/contracts": "^0.1.0-alpha.2",
     "@justpush/just-push-common": "1.0.0",
     "axios": "^1.1.3",
     "dotenv": "^16.0.3",
