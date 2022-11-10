@@ -1606,10 +1606,10 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@justpush/contracts@^0.1.0-alpha.2":
-  version "0.1.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/@justpush/contracts/-/contracts-0.1.0-alpha.2.tgz#aec7e7d5ce4f07da35f0b4c3a57ec9a5677b806e"
-  integrity sha512-NV/s+Cd6/p+eUJNywASyAg1j8Usrc+xCgXdXQ1n0msbwclujGIZ9bVjST+Bg/XeMUDt2xrtdC88setOAFDdI5A==
+"@justpush/contracts@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@justpush/contracts/-/contracts-0.1.0.tgz#71fdd97e093a48c3acc9fbfbdd9cb40e143de971"
+  integrity sha512-XRyd18Qg04M5ByPARb8E+2rYLHjp1I55eCeICcaddKl5DctwfwpORCZWeYOuqtDPrscWPcCmZ1pB/eT88uXUFA==
   dependencies:
     uuid "^9.0.0"
 

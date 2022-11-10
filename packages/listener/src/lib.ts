@@ -1,6 +1,6 @@
 import axios from 'axios';
 import logger from './logger';
-import { getTronWeb, getTronGridURL } from './tronweb';
+import { getTronWeb } from './tronweb';
 import { Event as JustPushEvent } from './event';
 import {
   modelAddNotification,
@@ -14,7 +14,7 @@ export const listenToContractEvents = async ({
 }: {
   contractAddress: string;
 }) => {
-  const host = getTronGridURL(process.env.NETWORK as string);
+  const host = 'https://api.trongrid.io';
   const monitorInterval = 2000;
 
   while (true) {
